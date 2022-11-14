@@ -6,3 +6,4 @@ pdf.output("test1.pdf")
 
 print("Test")
 print("test 2")
+print("Test 3")
