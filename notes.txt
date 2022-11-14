@@ -1,3 +1,9 @@
 https://pyfpdf.github.io/fpdf2/Images.html
 
 https://pyfpdf.readthedocs.io/en/latest/search.html?q=grid
+
+
+Youtube
+https://www.youtube.com/watch?v=qB44PreHWow
+https://www.youtube.com/watch?v=KxTStrfYZ_E
+
