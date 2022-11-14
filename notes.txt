@@ -1,0 +1,3 @@
+https://pyfpdf.github.io/fpdf2/Images.html
+
+https://pyfpdf.readthedocs.io/en/latest/search.html?q=grid
