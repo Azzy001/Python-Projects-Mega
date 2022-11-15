@@ -1,29 +1,30 @@
 from fpdf import FPDF
 from prettytable import PrettyTable
 
-article = PrettyTable(["Pros", "Cons"])
+# pdf = FPDF class
 pdf = FPDF()
+# pdf page set to portrait, A4 size
 pdf = FPDF(orientation="p", format="A4")
 
 # adds page to document
 pdf.add_page()
 
-"""
-# adding images to document (with hyperlink)
-pdf.image("", x=175, y=5, w=30, h=30, link="")
-pdf.image("", x=175, y=37, w=30, h=30, link="")
-
-"""
-
+# title
 pdf.set_font("Arial", size=17)
-pdf.cell(w=0, h=5, txt="Why should you learn Python in 2022?", ln=1)
+pdf.cell(w=0, h=7, txt="Why should you learn Python in 2022?", ln=1)
 
+# article by
 pdf.set_font("Arial", size=10)
-pdf.cell(w=0, h=10, txt="By Arsalan Arref", ln=1)
+pdf.cell(w=0, h=5, txt="By Arsalan Arref", ln=1)
+
+pdf.set_font("Arial", size=8)
+pdf.set_text_color(194,8,6)
+pdf.cell(w=0, h=10, txt="This PDF has been coded with Python (FPDF library)")
 
 # set position
 pdf.set_xy(x=10, y=30)
 pdf.set_font("Arial", style="B", size=10)
+pdf.set_text_color(0,0,0)
 pdf.cell(w=0, h=5, txt="Temp", ln=1)
 
 pdf.set_font("Arial", size=10)
@@ -62,7 +63,7 @@ pdf.multi_cell(w=0, h=5, txt="Examples of Python applications used in Healthcare
                                        "* Diabetes prediction\n"+
                                        "* Breast cancer detection")
 
-
+# 2. data visualization
 pdf.set_xy(x=10, y=150)
 pdf.set_font("Arial", style="B", size=10)
 pdf.cell(w=0, h=5, txt="        2. Data Visualization", ln=1)
@@ -75,16 +76,33 @@ pdf.multi_cell(w=0, h=5, txt="Using libraries like Matplotlib, you can create gr
                                         "Examples of data visualization:\n"+
                                         "https://www.tableau.com/learn/articles/best-beautiful-data-visualization-examples")
 
+# data visualization image
 pdf.image("data-visualization.png", x=10, y=180, w=90, h=50)
 
-pdf.set_xy(x=10, y=235)
+# 3. game development
+pdf.set_xy(x=105, y=190)
 pdf.set_font("Arial", style="B", size=10)
-pdf.cell(w=0, h=5, txt="        3. Game Development")
+pdf.cell(w=0, h=5, txt="        3. Game Development", ln=1)
+
+pdf.set_xy(x=105, y=200)
+pdf.set_font("Arial", size=10)
+pdf.multi_cell(w=95, h=5, txt="You can use PyGame library to create your very own 2D games, for example, "+
+                             "Flappy Bird, Snake, Chess, World of Tanks and so much more!."+
+                             "You can find games created and published by the community in the link below: "+
+                             "https://www.pygame.org/news")
+
+
+pdf.set_xy(x=10, y=240)
+pdf.set_font("Arial", style="B", size=10)
+pdf.cell(w=0, h=5, txt="        Conclusion", ln=1)
 
 pdf.set_font("Arial", size=10)
-pdf.multi_cell(w=0, h=5, txt="You can use PyGame library to create your very own 2D games, for example, "+
-                             "Flappy Bird, Snake, Chess, World of Tanks and so much more!.")
+pdf.multi_cell(w=120, h=5, txt="There are many applications that you can create with Python, from scraping "+
+                               "live data, to creating automation's, so much more."+
+                               "Take a look at my GitHub repositories for some ideas on what "+
+                               "you can create: https://github.com/Azzy001")
 
+pdf.image("pygame.jpg", x=140, y=240, w=60, h=50)
 
 # name document and add its path
 pdf.output("project.pdf")

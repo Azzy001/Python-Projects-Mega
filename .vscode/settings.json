@@ -4,6 +4,7 @@
         "Arsalan",
         "fpdf",
         "Matplotlib",
-        "prettytable"
+        "prettytable",
+        "pygame"
     ]
 }
