@@ -105,4 +105,4 @@ pdf.multi_cell(w=120, h=5, txt="There are many applications that you can create 
 pdf.image("pygame.jpg", x=140, y=240, w=60, h=50)
 
 # name document and add its path
-pdf.output("project.pdf")
+pdf.output("python-article-2022.pdf")
