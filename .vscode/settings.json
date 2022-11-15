@@ -3,6 +3,7 @@
         "Arref",
         "Arsalan",
         "fpdf",
+        "Matplotlib",
         "prettytable"
     ]
 }

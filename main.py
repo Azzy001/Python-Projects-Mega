@@ -56,7 +56,7 @@ pdf.multi_cell(w=0, h=5, txt="The medical industries are able to make better dec
 pdf.image("healthcare.jpg", x=10, y=100, w=75, h=45)
 
 pdf.set_xy(x=90, y=100)
-pdf.multi_cell(w=0, h=5, txt="Examples of Python applications used in Healthcare:\n" +
+pdf.multi_cell(w=0, h=5, txt="Examples of Python applications used in Healthcare:\n"+
                                        "* Parkinson's disease detection\n"+
                                        "* Heart disease detection\n"+
                                        "* Diabetes prediction\n"+
@@ -65,16 +65,25 @@ pdf.multi_cell(w=0, h=5, txt="Examples of Python applications used in Healthcare
 
 pdf.set_xy(x=10, y=150)
 pdf.set_font("Arial", style="B", size=10)
-pdf.cell(w=0, h=5, txt="        2. Data visualization", ln=1)
+pdf.cell(w=0, h=5, txt="        2. Data Visualization", ln=1)
 
 pdf.set_font("Arial", size=10)
-pdf.multi_cell(w=0, h=5, txt="Data visualization "+
-                                        ""+
-                                        ""+
-                                        ""+
-                                        "")
+pdf.multi_cell(w=0, h=5, txt="Using libraries like Matplotlib, you can create graphs, plots, maps and "+
+                                        "many more to better summarize and visualize your data."+
+                                        "A few examples of using Matplotlib library is that you can make accurate decisions,"+
+                                        "identify and compare multiple data sets to find results much faster. "+
+                                        "Examples of data visualization:\n"+
+                                        "https://www.tableau.com/learn/articles/best-beautiful-data-visualization-examples")
 
+pdf.image("data-visualization.png", x=10, y=180, w=90, h=50)
 
+pdf.set_xy(x=10, y=235)
+pdf.set_font("Arial", style="B", size=10)
+pdf.cell(w=0, h=5, txt="        3. Game Development")
+
+pdf.set_font("Arial", size=10)
+pdf.multi_cell(w=0, h=5, txt="You can use PyGame library to create your very own 2D games, for example, "+
+                             "Flappy Bird, Snake, Chess, World of Tanks and so much more!.")
 
 
 # name document and add its path
