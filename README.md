@@ -1,3 +1,5 @@
 # Why-should-you-learn-Python-in-2022
 
-still working on this project
+An article written in Python, using FPDF!
+
+    pip install fpdf
